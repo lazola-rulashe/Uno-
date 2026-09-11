@@ -1,10 +1,13 @@
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args){
         gameLogic sum = new gameLogic();
-        System.out.println(sum.getNumberCards());
+
+        System.out.println(sum.getDeck());
 
 
     }

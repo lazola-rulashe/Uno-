@@ -61,4 +61,14 @@ public class gameLogic {
 
         return wildCards;
     }
+
+    public ArrayList<String> getDeck(){
+        this.deck.addAll(getNumberCards());
+        this.deck.addAll(getActionCards());
+        this.deck.addAll(getWildCards());
+
+        return this.deck;
+    }
+
+
 }
