@@ -52,12 +52,14 @@ public class gameLogic {
     public ArrayList<String> getWildCards(){
         ArrayList<String> wildCards = new ArrayList<>();
 
-        for(String wild: WILD_CARDS){
-            wildCards.add(getEachCard(wild, "Red"));
-            wildCards.add(getEachCard(wild, "Blue"));
-            wildCards.add(getEachCard(wild, "Yellow"));
-            wildCards.add(getEachCard(wild, "Green"));
-        }
+        wildCards.add("Wild");
+        wildCards.add("+4");
+        wildCards.add("Wild");
+        wildCards.add("+4");
+        wildCards.add("Wild");
+        wildCards.add("+4");
+        wildCards.add("Wild");
+        wildCards.add("+4");
 
         return wildCards;
     }
@@ -68,6 +70,10 @@ public class gameLogic {
         this.deck.addAll(getWildCards());
 
         return this.deck;
+    }
+
+    public int getNumOfCards(){
+        return getDeck().toArray().length;
     }
 
 
