@@ -44,6 +44,11 @@ public class gameLogic {
             actionCards.add(getEachCard(action, "Yellow"));
             actionCards.add(getEachCard(action, "Green"));
 
+            actionCards.add(getEachCard(action, "Red"));
+            actionCards.add(getEachCard(action, "Blue"));
+            actionCards.add(getEachCard(action, "Yellow"));
+            actionCards.add(getEachCard(action, "Green"));
+
         }
         return actionCards;
 
