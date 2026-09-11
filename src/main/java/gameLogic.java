@@ -48,4 +48,17 @@ public class gameLogic {
         return actionCards;
 
     }
+
+    public ArrayList<String> getWildCards(){
+        ArrayList<String> wildCards = new ArrayList<>();
+
+        for(String wild: WILD_CARDS){
+            wildCards.add(getEachCard(wild, "Red"));
+            wildCards.add(getEachCard(wild, "Blue"));
+            wildCards.add(getEachCard(wild, "Yellow"));
+            wildCards.add(getEachCard(wild, "Green"));
+        }
+
+        return wildCards;
+    }
 }
