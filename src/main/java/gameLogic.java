@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class gameLogic {
@@ -73,6 +74,8 @@ public class gameLogic {
         this.deck.addAll(getNumberCards());
         this.deck.addAll(getActionCards());
         this.deck.addAll(getWildCards());
+
+        Collections.shuffle(this.deck);
 
         return this.deck;
     }
