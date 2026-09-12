@@ -7,7 +7,8 @@ import java.util.Stack;
 public class Main {
 
     public static ArrayList<String> discardPile = new ArrayList<>();
-
+    public static ArrayList<String> player1Hand = new ArrayList<>();
+    public static ArrayList<String> player2Hand = new ArrayList<>();
 
     public static void main(String[] args) throws ClassNotFoundException, IOException {
 
@@ -28,6 +29,8 @@ public class Main {
                 break;
             }
         }
+
+        System.out.println("Starter Card: " + discardPile);
 
     }
 }

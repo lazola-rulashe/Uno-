@@ -2,8 +2,6 @@ import java.util.ArrayList;
 
 public class Play {
 
-
-
     public ArrayList<String> deal(){
         ArrayList<String> playerHand = new ArrayList<>();
         DeckHandler deck = new DeckHandler();
@@ -18,6 +16,7 @@ public class Play {
             }
         }
         return playerHand;
+
     }
 
 

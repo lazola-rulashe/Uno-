@@ -6,6 +6,9 @@ public class DeckHandler {
     public final String[] ACTION_CARDS = {"+2", "reverse","skip"};
     public ArrayList<String> deck = new ArrayList<>();
 
+    public DeckHandler(){
+    }
+
     public String getEachCard(String name, String colour){
         return name + ":" + colour;
     }
@@ -81,6 +84,9 @@ public class DeckHandler {
     public int getNumOfCards(){
         return getDeck().toArray().length;
     }
+
+
+
 
 
 }
