@@ -42,21 +42,6 @@ public class Main {
                     }
                 }
 
-                for (int i = 0; i < Deck.toArray().length; i++){
-                    player1Hand.add(Deck.get(i));
-                    Deck.remove(Deck.get(i));
-                    if(player1Hand.size() == 8) {
-                        break;
-                    }
-                }
-
-                for (int z = 0; z < Deck.toArray().length; z++){
-                    player2Hand.add(Deck.get(z));
-                    Deck.remove(Deck.get(z));
-                    if(player2Hand.size() == 8) {
-                        break;
-                    }
-                }
 
 
             } catch(IOException ex) {
