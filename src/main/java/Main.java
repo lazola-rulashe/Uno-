@@ -1,21 +1,55 @@
-import com.sun.security.jgss.GSSUtil;
-
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Stack;
 
 public class Main {
+
+    public static ArrayList<String> player1Hand = new ArrayList<>();
+    public static ArrayList<String> player2Hand = new ArrayList<>();
+    public static ArrayList<String> discardPile = new ArrayList<>();
+
+
     public static void main(String[] args){
-        gameLogic sum = new gameLogic();
+        DeckHandler deck = new DeckHandler();
 
-//        System.out.println(sum.getNumOfCards());
-//        System.out.println(sum.getNumberCards().toArray().length);
-//        System.out.println(sum.getWildCards().toArray().length);
-//        System.out.println(sum.getActionCards().toArray().length);
-//
-//        System.out.println(sum.getWildCards());
-//        System.out.println(sum.getActionCards());
+        ArrayList<String> action = deck.getActionCards();
+        ArrayList<String> wild = deck.getWildCards();
+        ArrayList<String> Deck = deck.getDeck();
 
-        System.out.println(sum.getDeck());
+        StringBuilder str = new StringBuilder();
+
+        for (int i = 0; i < Deck.toArray().length; i++){
+            if(!(wild.contains(Deck.get(i)) || action.contains(Deck.get(i)))){
+                str.append(Deck.get(i));
+                discardPile.add(str.toString());
+                Deck.remove(str.toString());
+                break;
+            }
+        }
+
+        for (int i = 0; i < Deck.toArray().length; i++){
+            player1Hand.add(Deck.get(i));
+            Deck.remove(Deck.get(i));
+            if(player1Hand.size() == 8) {
+                break;
+            }
+        }
+
+        for (int z = 0; z < Deck.toArray().length; z++){
+            player2Hand.add(Deck.get(z));
+            Deck.remove(Deck.get(z));
+            if(player2Hand.size() == 8) {
+                break;
+            }
+        }
+
+//        System.out.println(discardPile);
+//        System.out.println(Deck);
+//        System.out.println(player1Hand);
+//        System.out.println(player2Hand);
+//        System.out.println(Deck.size());
+
+
+
 
 
     }

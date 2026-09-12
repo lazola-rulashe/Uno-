@@ -1,10 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 
-public class gameLogic {
+public class DeckHandler {
     public final int[] NUMBERS = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    public final String[] WILD_CARDS = {"wild", "+4"};
     public final String[] ACTION_CARDS = {"+2", "reverse","skip"};
     public ArrayList<String> deck = new ArrayList<>();
 
@@ -59,13 +57,13 @@ public class gameLogic {
         ArrayList<String> wildCards = new ArrayList<>();
 
         wildCards.add("Wild");
-        wildCards.add("+4");
+        wildCards.add("+4 wild");
         wildCards.add("Wild");
-        wildCards.add("+4");
+        wildCards.add("+4 wild");
         wildCards.add("Wild");
-        wildCards.add("+4");
+        wildCards.add("+4 wild");
         wildCards.add("Wild");
-        wildCards.add("+4");
+        wildCards.add("+4 wild");
 
         return wildCards;
     }
