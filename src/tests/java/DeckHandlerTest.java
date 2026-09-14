@@ -29,7 +29,7 @@ public class DeckHandlerTest {
     public void shouldReturnListOfNumberCards(){
 
         //Total length of all number cards
-        assertEquals(76, deck.getNumberCards().toArray().length);
+        assertEquals(76, deck.getNumberCards().size());
 
         //Tests the number of zeros there are
         int count = 0;
@@ -70,4 +70,26 @@ public class DeckHandlerTest {
         assertEquals(72, counts);
 
     }
+
+    @Test
+    public void shouldReturnListOfActionCards(){
+
+        //Tests length of all action cards
+        assertEquals(24, deck.getActionCards().size());
+
+        //Tests that all action cards are there for each colour
+        int counts1 = 0;
+        for(String action: deck.getActionCards()){
+            if(action.contains("+2")){
+                counts1++;
+            }else if(action.contains("reverse")){
+                counts1++;
+            }else if(action.contains("skip")){
+                counts1++;
+            }
+        }
+
+        assertEquals(24, counts1);
+    }
+
 }
