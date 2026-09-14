@@ -26,7 +26,7 @@ public class DeckHandlerTest {
     }
 
     @Test
-    public void shouldReturnListOfNumberCards(){
+    public void shouldReturnAllNumberCards(){
 
         //Total length of all number cards
         assertEquals(76, deck.getNumberCards().size());
@@ -72,7 +72,7 @@ public class DeckHandlerTest {
     }
 
     @Test
-    public void shouldReturnListOfActionCards(){
+    public void shouldReturnAllActionCards(){
 
         //Tests length of all action cards
         assertEquals(24, deck.getActionCards().size());
@@ -91,5 +91,35 @@ public class DeckHandlerTest {
 
         assertEquals(24, counts1);
     }
+
+    @Test
+    public void shouldReturnAllWildCards(){
+
+        //Tests length of all the wild cards
+        assertEquals(8, deck.getWildCards().size());
+
+        //Tests the number "+4" wild cards there are
+        int count4= 0;
+        for(String wild4: deck.getWildCards()){
+            if(wild4.contains("+4")){
+                count4++;
+            }
+        }
+        assertEquals(4, count4);
+
+        //Tests the number of "wild" wild cards there are
+        int countWild = 0;
+        for(String wild: deck.getWildCards()){
+            if(wild.contains("wild")){
+                countWild++;
+            }
+        }
+
+        assertEquals(4, countWild);
+
+
+    }
+
+
 
 }
