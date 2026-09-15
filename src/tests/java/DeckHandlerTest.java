@@ -1,9 +1,10 @@
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DeckHandlerTest {
@@ -124,7 +125,7 @@ public class DeckHandlerTest {
 
     @Test
     public void shouldReturnLengthOfDeck(){
-
+        //Resturns length of entire deck
         assertEquals(108, deck.getDeck().size());
 
     }

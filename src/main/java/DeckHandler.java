@@ -81,12 +81,4 @@ public class DeckHandler {
         return this.deck;
     }
 
-    public int getNumOfCards(){
-        return getDeck().toArray().length;
-    }
-
-
-
-
-
 }

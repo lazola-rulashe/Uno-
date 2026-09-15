@@ -8,15 +8,17 @@ public class Play {
 
         ArrayList<String> Deck = deck.getDeck();
 
-        for (int i = 0; i < Deck.toArray().length; i++){
+        for (int i = 0; i < Deck.size(); i++){
             playerHand.add(Deck.get(i));
-            Deck.remove(Deck.get(i));
             if(playerHand.size() == 8) {
                 break;
             }
         }
-        return playerHand;
 
+        for(String card: playerHand){
+            Deck.remove(card);
+        }
+        return playerHand;
     }
 
 
